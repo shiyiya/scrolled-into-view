@@ -1,0 +1,37 @@
+{
+  "name": "scrolled-into-view",
+  "version": "1.0.0",
+  "description": "Determining whether the element into the document view.",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test",
+    "start": "parcel ./index.html --out-dir ./.cache",
+    "build": "rollup --config build/rollup.config.js"
+  },
+  "keywords": [
+    "scroll",
+    "reveal"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiyiya/scrolled-into-view.git"
+  },
+  "author": "shiyiya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shiyiya/scrolled-into-view/issues"
+  },
+  "homepage": "https://github.com/shiyiya/scrolled-into-view#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/plugin-external-helpers": "^7.0.0",
+    "@babel/preset-env": "^7.1.5",
+    "jest": "^23.6.0",
+    "rollup": "^0.67.0",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-uglify": "^6.0.0"
+  }
+}
