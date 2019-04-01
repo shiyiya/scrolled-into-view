@@ -1,5 +1,5 @@
-class scrolledIntoViewClass {
-  constructor(options) {
+class ScrolledIntoViewClass {
+  constructor (options) {
     const defaultOption = {
       target: '.into-view',
       intoCallback: null,
@@ -18,7 +18,7 @@ class scrolledIntoViewClass {
     this.init()
   }
 
-  init() {
+  init () {
     this.into = new Array(this.targets.length).fill(false)
     if (!window.IntersectionObserver) {
       document.addEventListener('scroll', () => {
@@ -35,11 +35,11 @@ class scrolledIntoViewClass {
       entries.forEach(entry => {
         if (entry.intersectionRatio) {
           // in
-          //this.observer.unobserve(entry.target)
+          // this.observer.unobserve(entry.target)
           const target = entry.target
           this.exparget(target, 1)
         } else {
-          //this.observer.unobserve(entry.target)
+          // this.observer.unobserve(entry.target)
           this.exparget(entry.target, 0)
         }
       })
@@ -50,19 +50,19 @@ class scrolledIntoViewClass {
     })
   }
 
-  observerTarget() {
+  observerTarget () {
     const windowinnerHeight = window.innerHeight
 
     this.targets.forEach((target, k) => {
       const { top, bottom } = target.getBoundingClientRect()
 
-      //into view
+      // into view
       if (!this.into[k] && top < windowinnerHeight && top > 0) {
         this.into[k] = true
         this.exparget(target, 1)
       }
 
-      //out view
+      // out view
       if (
         this.into[k] &&
         ((top > windowinnerHeight && bottom > windowinnerHeight) ||
@@ -74,19 +74,19 @@ class scrolledIntoViewClass {
     })
   }
 
-  exparget(target, key) {
+  exparget (target, key) {
     const callback = [this.options.outCallback, this.options.intoCallback]
 
     callback[key] && callback[key](target)
   }
 
-  destroy() {
+  destroy () {
     this.observer.disconnect()
   }
 }
 
-export default function scrolledIntoView(target, intoCallback, outCallback) {
-  return new scrolledIntoViewClass({
+export default function scrolledIntoView (target, intoCallback, outCallback) {
+  return new ScrolledIntoViewClass({
     target,
     intoCallback,
     outCallback
