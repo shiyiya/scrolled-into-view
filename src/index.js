@@ -21,9 +21,7 @@ class ScrolledIntoViewClass {
   init () {
     this.into = new Array(this.targets.length).fill(false)
     if (!window.IntersectionObserver) {
-      document.addEventListener('scroll', () => {
-        this.observerTarget()
-      })
+      this.listener = document.addEventListener('scroll', this.observerTarget)
       return
     }
     let observerConfig = {
@@ -82,6 +80,7 @@ class ScrolledIntoViewClass {
 
   destroy () {
     this.observer.disconnect()
+    document.removeEventListener('scroll', this.observerTarget)
   }
 }
 

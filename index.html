@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
 
-    <style>
-      h1 {
-        transition: all 1s;
-        text-align: center;
-        line-height: 2;
-        color: mediumpurple;
-      }
-      .in {
-        letter-spacing: 10px;
-        color: rgb(32, 173, 163);
-      }
-    </style>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
 
-  <body>
-    <h1>scrolledIntoView</h1>
-    <h1>scrolledIntoView</h1>
-    <h1>scrolledIntoView</h1>
-    <h1>scrolledIntoView</h1>
-    <h1>scrolledIntoView</h1>
-    <h1>scrolledIntoView</h1>
-    <h1>scrolledIntoView</h1>
-    <h1>scrolledIntoView</h1>
-    <h1>scrolledIntoView</h1>
-    <h1>scrolledIntoView</h1>
-    <h1>scrolledIntoView</h1>
-    <h1>scrolledIntoView</h1>
-    <h1>scrolledIntoView</h1>
-    <h1>scrolledIntoView</h1>
-    <h1>scrolledIntoView</h1>
-    <h1>scrolledIntoView</h1>
-    <h1>scrolledIntoView</h1>
-    <script src="./dist/scrolledintoview.min.js"></script>
-    <script>
+  <style>
+    h1 {
+      transition: all 2s;
+      text-align: center;
+      color: mediumpurple;
+      animation: right2left 2s;
+    }
+
+    .in {
+      letter-spacing: 10px;
+      color: rgb(32, 173, 163);
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="0">scrolledIntoView 0</h1>
+  <h1 id="1">scrolledIntoView 1</h1>
+  <h1 id="2">scrolledIntoView 2</h1>
+  <h1 id="3">scrolledIntoView 3</h1>
+  <h1 id="4">scrolledIntoView 4</h1>
+  <h1 id="5">scrolledIntoView 5</h1>
+  <h1 id="6">scrolledIntoView 6</h1>
+  <h1 id="7">scrolledIntoView 7</h1>
+  <h1 id="8">scrolledIntoView 8</h1>
+  <h1 id="9">scrolledIntoView 9</h1>
+  <h1 id="10">scrolledIntoView 10</h1>
+  <h1 id="11">scrolledIntoView 11</h1>
+  <h1 id="12">scrolledIntoView 12</h1>
+  <h1 id="13">scrolledIntoView 13</h1>
+  <h1 id="14">scrolledIntoView 14</h1>
+  <h1 id="15">scrolledIntoView 15</h1>
+  <h1 id="16">scrolledIntoView 16</h1>
+  <script src="./dist/scrolledintoview.min.js"></script>
+  <script>
       scrolledIntoView(
         'h1',
         function(el) {
@@ -50,6 +52,7 @@
         }
       )
     </script>
-    <!-- <script src="./example/index.js"></script> -->
-  </body>
+  <!-- <script src="./example/index.js"></script> -->
+</body>
+
 </html>
